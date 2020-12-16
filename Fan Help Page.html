@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--Fan Help Page.html-->
+<!-- Tammy Ogunkale -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            figure{
+                width:30%;
+                float:left;
+                margin:23px;
+                padding:0px;
+            }
+            
+
+            h1 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+
+            /* Solid border */
+            hr.solid {
+                border-top: 1px solid;
+            }
+
+            p {
+                margin-left: 250px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+
+            /* Create two unequal columns that floats next to each other */
+            .column {
+                float: left;
+                padding: 10px;
+
+            }
+
+            .left {
+                width: 5%;
+            }
+
+            .right {
+                width: 95%;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 70%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+            .content {
+                padding: 0 18px;
+                width: 70%;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="column left">
+            <figure>
+                <a href="index.html">
+                    <button>
+                        <img src="https://www.pinclipart.com/picdir/middle/34-349286_computer-icons-home-house-download-commercial-transprent-home.png" width="85" height="85"/>
+                    </button>                   
+                </a>
+                <figcaption><p style="margin-left: 32px">Home
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Environment Page.html">
+                    <button>
+                        <img src="https://www.nicepng.com/png/detail/191-1910611_back-arrow-arrows-buttons-back-icon-png.png" width="85" height="85"/>                       
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 10px">Environment
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Fan Page.html">
+                    <button>
+                        <img src="https://static.thenounproject.com/png/36185-200.png" width="85" height="85"/>
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 40px">Fan
+                </figcaption>
+            </figure>
+            
+
+        </div>
+
+
+        <div class="column right">
+            <center>
+                <h1 style="text-align: center; font-size:300%"> Silver Springs Smart Home </h1>
+
+                <h2 style="font-size:200%; color: chocolate">Fan | Help</h2>
+
+                <hr class="solid" style="color: black; width: 65%">
+            </center>
+            <br>
+        </div>
+        
+                <div style="position: relative; left: 12%"> 
+<button class="collapsible">Program</button>
+<div class="content">
+  This allows you to program the fan in your room to turn on/off on a certain day.
+  <br>
+  You can program it to be on/0ff for a certain duration of time.
+</div>
+<button class="collapsible">View</button>
+<div class="content">
+  This shows you the status of the fan in your room.
+  <br>
+  It lets you know if the fan is on or off.
+</div>
+<button class="collapsible">History</button>
+<div class="content">
+  This allows you to view the usage history of the fan in your room.
+  <br>
+  It lets you see the status of a fan on a certain day, and how long it maintained that status.
+</div>
+<button class="collapsible">Set</button>
+<div class="content">
+  This allows you to turn the fan in your room on/off.
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+
+        <div style="position: relative">
+            <p style="position: fixed; bottom: 4%; width: 100%; left: -10%; font-size: 150%"> 
+                5:29pm | October 24th
+            </p>
+        </div>
+    
+    </body>
+</html>
+

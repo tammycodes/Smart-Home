@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--Water Heater History Page.html-->
+<!-- Tammy Ogunkale -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            figure{
+                width:30%;
+                float:left;
+                margin:23px;
+                padding:0px;
+            }
+            
+
+            h1 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+
+            /* Solid border */
+            hr.solid {
+                border-top: 1px solid;
+            }
+
+            p {
+                margin-left: 250px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+
+            /* Create two unequal columns that floats next to each other */
+            .column {
+                float: left;
+                padding: 10px;
+
+            }
+
+            .left {
+                width: 5%;
+            }
+
+            .right {
+                width: 95%;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+            
+            label {
+                display: block;
+                font: 1rem 'Fira Sans', sans-serif;
+            }
+
+            input,
+            label {
+                margin: .4rem 0;
+            }
+        </style>
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="column left">
+            <figure>
+                <a href="index.html">
+                    <button>
+                        <img src="https://www.pinclipart.com/picdir/middle/34-349286_computer-icons-home-house-download-commercial-transprent-home.png" width="85" height="85"/>
+                    </button>                   
+                </a>
+                <figcaption><p style="margin-left: 32px">Home
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Environment Page.html">
+                    <button>
+                        <img src="https://www.nicepng.com/png/detail/191-1910611_back-arrow-arrows-buttons-back-icon-png.png" width="85" height="85"/>                       
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 10px">Environment
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Water Heater Page.html">
+                    <button>
+                        <img src="https://image.flaticon.com/icons/png/512/45/45518.png" width="85" height="85"/>
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 30px">Water Heater
+                </figcaption>
+            </figure>
+            
+
+        </div>
+
+
+        <div class="column right">
+            <center>
+                <h1 style="text-align: center; font-size:300%"> Silver Springs Smart Home </h1>
+
+                <h2 style="font-size:200%; color: chocolate">Water Heater | History</h2>
+
+                <hr class="solid" style="color: black; width: 65%">
+            </center>
+            <br>
+        </div>
+        
+        <div>
+            <label for="location" style="position: fixed; top: 17%; left: 38%; font-size: 250%">Location:
+
+                <select id="location" style="font-size: 70%">
+                    <option value="kitchen">Kitchen</option>
+                    <option value="half Bathroom">Half Bathroom</option>
+                    <option value="full Bathroom">Full Bathroom</option>
+                </select>
+            </label>
+        </div>
+        
+        <table cellspacing="0" cellpadding="0" border="0" width="325" style="position: fixed; top: 38%; left: 28%">
+  <tr>
+    <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="700">
+         <tr style="color:white;background-color:grey">
+            <th>
+                <label for="start">DATE:</label>
+
+                <input type="date" id="start" name="trip-start"
+                    value="2018-07-22"
+                    min="2018-01-01" max="2018-12-31">
+            </th> 
+         </tr>
+       </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <div style="width:700px; height:120px; overflow:auto;">
+         <table cellspacing="0" cellpadding="1" border="1" width="700" >
+             <tr style="text-align: center; font-weight: bold">
+             <td>Status</td>
+             <td>ON</td>
+             <td>OFF</td>
+           </tr>
+           <tr style="text-align: center">
+             <td>01</td>
+             <td>12am-10am | 105<span>&#176;</span></td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>02</td>
+             <td>--</td>
+             <td>10:01am-8pm</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>03</td>
+             <td>8:01pm-11:59pm | 120<span>&#176;</span></td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>04</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>05</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>06</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>07</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>08</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+              <tr style="text-align: center">
+             <td>09</td>
+             <td>--</td>
+             <td>--</td>
+           </tr>
+         </table>  
+       </div>
+    </td>
+  </tr>
+</table>
+
+        <div style="position: relative">
+            <p style="position: fixed; bottom: 4%; width: 100%; left: -10%; font-size: 150%"> 
+                5:29pm | October 24th
+            </p>
+        </div>
+        
+        <div>
+            <figure style="position: fixed; bottom: -2%; left: 90%;">
+                <a href="Water Heater Help Page.html">
+                    <button>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1200px-Icon-round-Question_mark.svg.png" width="60" height="60" />
+                    </button>                   
+                </a>
+                <figcaption><p style="margin-left: 20px">HELP
+                </figcaption>
+            </figure>
+        </div>
+    
+    </body>
+</html>
+

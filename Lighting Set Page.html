@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--Lighting Set Page.html-->
+<!-- Tammy Ogunkale -->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            * {
+                box-sizing: border-box;
+            }
+
+            figure{
+                width:30%;
+                float:left;
+                margin:23px;
+                padding:0px;
+            }
+            
+
+            h1 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+
+
+            /* Solid border */
+            hr.solid {
+                border-top: 1px solid;
+            }
+
+            p {
+                margin-left: 250px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+
+            /* Create two unequal columns that floats next to each other */
+            .column {
+                float: left;
+                padding: 10px;
+
+            }
+
+            .left {
+                width: 5%;
+            }
+
+            .right {
+                width: 95%;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+            
+            #container {
+                width: 800px;
+                height: 600px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .status {
+                height: 250px;
+                width: 250px;
+                margin-left: 2px;
+                border: 1px solid white;
+            }
+            
+            .slidecontainer {
+                width: 50%;
+                color: black
+            }
+
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 10px;
+                border-radius: 5px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                color: black
+                }
+
+            .slider:hover {
+                opacity: 1;
+                color: black
+            }
+
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 23px;
+                height: 24px;
+                border: 0;
+                background: url('contrasticon.png');
+                cursor: pointer;
+                color: black
+                }
+
+            .slider::-moz-range-thumb {
+                width: 23px;
+                height: 24px;
+                border: 0;
+                background: url('contrasticon.png');
+                cursor: pointer;
+                color: black
+            }
+        </style>
+    </head>
+    <body style="background-color:powderblue;">
+        <div class="column left">
+            <figure>
+                <a href="index.html">
+                    <button>
+                        <img src="https://www.pinclipart.com/picdir/middle/34-349286_computer-icons-home-house-download-commercial-transprent-home.png" width="85" height="85"/>
+                    </button>                   
+                </a>
+                <figcaption><p style="margin-left: 32px">Home
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Environment Page.html">
+                    <button>
+                        <img src="https://www.nicepng.com/png/detail/191-1910611_back-arrow-arrows-buttons-back-icon-png.png" width="85" height="85"/>                       
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 10px">Environment
+                    <hr class="solid" style="color: black; width: 700%">
+                </figcaption>
+            </figure>
+            
+            <figure style="margin-top: -20%">
+                <a href="Lighting Page.html">
+                    <button>
+                        <img src="https://www.clipartmax.com/png/middle/98-983193_open-light-bulb-icon.png" width="85" height="85"/>
+                    </button>
+                </a>
+                <figcaption><p style="margin-left: 25px">Lighting
+                </figcaption>
+            </figure>
+            
+
+        </div>
+
+
+        <div class="column right">
+            <center>
+                <h1 style="text-align: center; font-size:300%"> Silver Springs Smart Home </h1>
+
+                <h2 style="font-size:200%; color: chocolate">Lighting | Set</h2>
+
+                <hr class="solid" style="color: black; width: 65%">
+            </center>
+            <br>
+        </div>
+        
+        <div>
+            <label for="location" style="position: fixed; top: 17%; left: 43%; font-size: 250%">Location:
+
+                <select id="location" style="font-size: 70%">
+                    <option value="kitchen">Kitchen</option>
+                    <option value="half Bathroom">Half Bathroom</option>
+                    <option value="full Bathroom">Full Bathroom</option>
+                    <option value="living room">Living Room</option>
+                    <option value="master bedroom">Master Bedroom</option>
+                    <option value="children bedroom">Children Bedroom</option>
+                    <option value="guest bedroom">Guest Bedroom</option>
+                    <option value="dining bedroom">Dining Bedroom</option>
+                </select>
+            </label>
+        </div>
+        
+        <div id="container">
+            <div class="status">
+                <button style="width: 250px; height: 250px; font-size: 80px" onclick="myFunction1()">ON</button>            
+            </div>
+            <br>
+            <div class="status">
+                <button style="width: 250px; height: 250px; font-size: 80px" onclick="myFunction2()">OFF</button>
+            </div>
+        </div>
+        
+        <div class="slidecontainer" style="position: fixed; top: 75%; left: 28%">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p>Light Intensity: <span id="demo"></span></p>
+            <div style="position: fixed; top: 80%; left: 25%"><b>Lower</b></div>
+            <div style="position: fixed; top: 80%; left: 75%"><b>Higher</b></div>
+            
+        </div>
+
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            }
+        </script>
+        
+        <script>
+            function myFunction1() {
+            document.getElementById("demo").innerHTML = "ON";
+            }
+        </script>
+        
+        <script>
+            function myFunction2() {
+            document.getElementById("demo").innerHTML = "OFF";
+            }
+        </script>
+
+        <div style="position: relative">
+            <p style="position: fixed; bottom: 4%; width: 100%; left: -10%; font-size: 150%"> 
+                5:29pm | October 24th
+            </p>
+        </div>
+        
+        <div>
+            <figure style="position: fixed; bottom: -2%; left: 90%;">
+                <a href="Lighting Help Page.html">
+                    <button>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1200px-Icon-round-Question_mark.svg.png" width="60" height="60" />
+                    </button>                   
+                </a>
+                <figcaption><p style="margin-left: 20px">HELP
+                </figcaption>
+            </figure>
+        </div>
+    
+    </body>
+</html>
+
